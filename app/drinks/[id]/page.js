@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import drinkImg from "./pexels-nitin-sharma-2842876.jpg";
+// import drinkImg from "./pexels-nitin-sharma-2842876.jpg";
 const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 
 async function fetchDrink(id) {
