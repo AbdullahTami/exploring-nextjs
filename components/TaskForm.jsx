@@ -1,6 +1,5 @@
 import { createTask } from "@/utils/actions";
 
-
 function TaskForm() {
   return (
     <form action={createTask}>
@@ -13,7 +12,7 @@ function TaskForm() {
           required
         />
         <button type="submit" className="btn btn-primary join-item">
-          create submit
+          create task
         </button>
       </div>
     </form>
