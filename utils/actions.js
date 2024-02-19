@@ -12,6 +12,20 @@ export async function getAllTasks() {
   });
 }
 
+export async function createTaskCustom(prevState, formData) {
+  const content = formData.get("content");
+  try {
+    await prisma.task.create({
+      data: {
+        content,
+      },
+    });
+    revalidatePath("/tasks");
+    return { message: "success" };
+  } catch (error) {
+    return { message: "error" };
+  }
+}
 export async function createTask(formData) {
   const content = formData.get("content");
   await prisma.task.create({
