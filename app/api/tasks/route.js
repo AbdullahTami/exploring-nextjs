@@ -1,8 +1,9 @@
 import db from "@/utils/db";
+import { NextResponse } from "next/server";
 
 export async function GET(req) {
   const tasks = await db.task.findMany();
-  return Response.json({ data: tasks });
+  return NextResponse.json({ data: tasks });
 }
 
 export async function POST(req) {
@@ -13,5 +14,5 @@ export async function POST(req) {
     },
   });
 
-  return Response.json({ msg: "Task created!", task });
+  return NextResponse.json({ msg: "Task created!", task });
 }
